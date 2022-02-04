@@ -1,0 +1,453 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;500;600;700;800;900&family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* font-family: 'Mulish', sans-serif;
+    font-family: 'Open Sans', sans-serif; */
+    list-style: none;
+    text-decoration: none;
+}
+img{
+    width: 100%;
+}
+/* *******navbar*************** */
+.navbar{
+    background: #fff;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border: none;
+    padding: 1.3em 10em;
+    z-index: 99;
+
+}
+.navbar .menu{
+    display: none;
+}
+.navbar .logo img{
+    cursor: pointer;
+    width: 11em;
+}
+.navbar nav ul{
+    display: flex;
+    
+}
+.navbar nav ul li{
+    padding: 0 0.75em;
+    line-height: 2.5;
+}
+.navbar nav ul li a{
+    font-family: 'Mulish', sans-serif;
+    text-transform: uppercase;
+    font-size: 0.9em;
+    color: #222222;
+    letter-spacing: 0.5px;
+    font-weight: 700;
+}
+.navbar nav ul li .active{
+    color: #86AE34;
+}
+.navbar nav ul li:hover a{
+    color: #86AE34;
+}
+.navbar nav ul li:nth-child(7) a{
+    background: #86AE34;
+    padding: 0.9em 1.5em;
+    border-radius: 2px;
+    color: #fff;
+}
+.navbar nav ul li:nth-child(7):hover a{
+   background: #ff852e ;
+}
+/* *****feature**** */
+.feature{
+    position: relative;
+   
+}
+.bg-overlay{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    background: rgba(0,0,0,0.1);
+    z-index: 1;
+}
+.feature-title{
+    position: absolute;
+    top: 50%;
+    left: 12%;
+    transform: translate(-12%, -50%);
+    font-family: 'Mulish', sans-serif;
+    z-index: 9;
+   
+}
+.feature-title h3{
+    color: #fff;
+    font-size: 20px;
+    margin: auto;
+    display: inline-block;
+    text-transform: uppercase;
+   
+    letter-spacing: 5px;
+}
+.feature-title h1{
+    font-size: 3.8rem;
+    text-transform: capitalize;
+    color: #fff;
+    letter-spacing: 0px;
+    padding-bottom: 5px;
+    overflow: hidden;
+    text-shadow: 0px 10px 30px rgb(0 0 0 / 43%);
+}
+
+.feature-title p{
+    color: #fff;
+    font-size: 16px;
+    max-width: 700px;
+    text-shadow: 0px 10px 30px rgb(0 0 0 / 43%);
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+}
+
+.mySlides {
+    display:none;
+}
+.button{
+    position: relative;
+    top: 10%;
+}
+.feature-title a{
+    padding: 12px 28px;
+    background: #ff852e;
+    font-size: 14px;
+    border-radius: 2px;
+    z-index: 1;
+    color: #fff;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+    font-weight: 800;
+}
+.feature-title .outline{
+    background: transparent;
+    border: 1px solid #fff;
+}
+/* *********services************** */
+.services,
+.offers{
+    max-width: 1500px;
+    width: 90%;
+    margin: 4em auto;
+}
+.services .services-title,
+.offers .offers-title{
+    text-align: center;
+    font-family: 'Mulish', sans-serif;
+}
+.services .services-title h3,
+.offers .offers-title h3{
+    font-size: 2.1em;
+    font-weight: 900;
+    color: #FF852E;
+    text-transform: uppercase;
+    padding-bottom: 1.1rem;
+    position: relative;
+   
+}
+.services .services-title h3::after,
+.offers .offers-title h3::after{
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    bottom: 0;
+    margin: 0 auto;
+    width: 75px;
+    height: 2px;
+    background: #222222;
+}
+.services .services-title p,
+.offers .offers-title p{
+    font-size: 1rem;
+    padding: 2rem;
+    color: #484848;
+    font-weight: 900;
+}
+.services-card{
+    display: flex;
+    justify-content: space-between;
+}
+.services-card .card{
+    background-color: #f3f4f1;
+    padding: 2.5em 1.25em;
+    width: 23%;
+}
+.services-card .card .card-img{
+    transition: 0.5s;
+    max-width: 32%;
+    text-align: center;
+    margin: 0 auto;
+    display: block;
+    max-height: 120px;
+}
+.services-card .card .card-img:hover{
+    transform: scale(1.05);
+}
+.services-card .card .card-info{
+    font-family: 'Mulish', sans-serif;
+    text-align: center;
+}
+.services-card .card .card-info b{
+    font-size: 1.2em;
+    display: block;
+    font-weight: 800;
+    color: #99ae08;
+    padding-bottom: 0.7em;
+}
+.services-card .card .card-info p{
+    font-size: 0.8em;
+    margin-bottom: 20px;
+    color: #545454;
+    font-weight: 700;
+    min-height: 150px;
+    line-height: 1.5rem;
+}
+.services-card .card .card-info a{
+    font-size: 1em;
+    font-weight: 700;
+    background: transparent;
+    color: #86ae34;
+    border: 2px solid #86ae34;
+    padding: 10px 26px;
+    transition: ease all 0.5s;
+    position: relative;
+}
+.services-card .card .card-info a::after{
+    content: '>';
+    position: absolute;
+    opacity: 0;
+    padding-left: 10px;
+    transition: ease all 0.5s;
+
+}
+.services-card .card .card-info a:hover::after{
+   
+    opacity: 1;
+   
+}
+
+.services-card .card .card-info a:hover{
+    background: #86AE34;
+    color: #fff;  
+}
+/* ************click************* */
+
+.click{
+    display: flex;
+    justify-content: center;
+    max-width: 1600px;
+    width: 100%;
+    margin: 0 auto;
+    font-family: 'Mulish', sans-serif;
+   
+}
+.click-part-1{
+    width: 50%;
+    background: url(bg-abt-fnv.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 640px;
+}
+.click-part-1{
+    padding: 4em;
+}
+.click-part-1 h3{
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 2.5rem;
+    padding-bottom: 1em;
+}
+.click-part-1 p b{
+    color: #fff;
+    font-size: 18px;
+   
+   
+}
+
+.click .click-part-1 .btn{
+    padding: 12px 28px;
+    background: #85AE34;
+    font-size: 14px;
+    position: relative;
+    right: 1.5em;
+    
+    border-radius: 2px;
+    color: #fff;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+    font-weight: 800;
+   
+   float: right;
+    
+}
+.click-part-2{
+    width: 50%;
+    background: url(fnvfarmsapp-new.jpg);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover; 
+    height: 640px;
+}
+/* *****  offers  ***************** */
+
+.offers{
+    max-width: 1575px;
+    width: 100%;
+    margin: 4em auto;
+}
+.offers-card{
+   display: grid;
+   grid-template-columns: auto auto auto;
+   gap: 1.75em;
+}
+.card-details{
+    
+    overflow: hidden;
+    position: relative;
+    
+}
+.card-details .image-wrap{
+    transition: all 1s ease;
+    border: 2px solid #FF852E;
+}
+
+
+
+.card-details .image-wrap:hover{
+    transform: scale(1.1);
+    
+   
+}
+.card-details .content-wrap{
+
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    
+    width: 100%;
+
+    background: linear-gradient(rgba(255, 255, 255, 0), rgb(101, 140, 22));
+    z-index: 1;
+}
+.card-details .content-wrap p{
+    color: #86AE34;
+    background: #fff;
+    padding: 1.5em;
+    margin: 2em;
+}
+.card-button{
+    text-align: center;
+    margin-top: 2em;
+}
+.card-button a{
+    padding: 12px 28px;
+    background: #ff852e;
+    font-size: 14px;
+    position: relative;
+    font-family: 'Mulish', sans-serif;
+    border-radius: 2px;
+    z-index: 1;
+    color: #fff;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+    font-weight: 800;
+  
+}
+.card-button a:hover{
+    background: #86AE34;
+}
+
+/* ********* footer************** */
+
+.footer{
+    display: flex;
+    justify-content: space-between;
+    background: #222222;
+    color: #fff;
+    padding: 2em;
+    text-align: left;
+}
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 1025px){
+    .navbar{
+        padding: 1em 2em;
+    }
+    .navbar .menu{
+        display: block;
+    }
+    nav ul{
+        width: 50%;
+        position: absolute;
+        top: 4em;
+        left: 0;
+        z-index: 2;
+        flex-direction: column;
+        background: cyan;
+        
+        
+    }
+    nav ul li{
+        padding: 4em;
+        
+
+    }
+    #myNav{
+        overflow: scroll;
+        transition: 1s;
+        height: 100vh;
+    }
+    .services-card{
+        flex-direction: column;
+    }
+    .services-card .card{
+        width: 95%;
+        margin: 0 auto;
+        
+    }
+    .click{
+        flex-direction: column;
+        width: 90%;
+    }
+    .click-part-1{
+        width: 100%;
+        height: max-content;
+        margin: 0 auto;
+    }
+    .click-part-1 .btn{
+        float: left;
+        left: 2em;
+        bottom: 0;
+    }
+    .click-part-2{
+        width: 100%;
+    }
+    .offers-card{
+        grid-template-columns: auto;
+     }
+}
