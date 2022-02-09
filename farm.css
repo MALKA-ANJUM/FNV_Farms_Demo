@@ -3,8 +3,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /* font-family: 'Mulish', sans-serif;
-    font-family: 'Open Sans', sans-serif; */
     list-style: none;
     text-decoration: none;
 }
@@ -22,18 +20,16 @@ img{
     border: none;
     padding: 1.3em 10em;
     z-index: 99;
-
 }
 .navbar .menu{
     display: none;
 }
 .navbar .logo img{
     cursor: pointer;
-    width: 11em;
+    width: 10em;
 }
 .navbar nav ul{
-    display: flex;
-    
+    display: flex;  
 }
 .navbar nav ul li{
     padding: 0 0.75em;
@@ -62,11 +58,36 @@ img{
 .navbar nav ul li:nth-child(7):hover a{
    background: #ff852e ;
 }
-/* *****feature**** */
-.feature{
+.slideshow-container { 
     position: relative;
-   
 }
+.slideshow-container .mySlides img{
+    min-height: 70vh;
+    object-position: top left;
+    object-fit: cover;
+}
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    z-index: 10;
+}
+.next{
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+} 
 .bg-overlay{
     position: absolute;
     left: 0;
@@ -74,8 +95,7 @@ img{
     top: 0;
     bottom: 0;
     width: 100%;
-    background: rgba(0,0,0,0.1);
-    z-index: 1;
+    background: rgba(0,0,0,0.3);  
 }
 .feature-title{
     position: absolute;
@@ -84,7 +104,20 @@ img{
     transform: translate(-12%, -50%);
     font-family: 'Mulish', sans-serif;
     z-index: 9;
-   
+}
+.title h2{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Mulish', sans-serif;
+    font-size: 2.8rem;
+    font-weight: 800;
+    padding: 20px;
+    line-height: 1;
+    display: inline-block;
+    color: #fff;
+    text-shadow: 0px 1px 2px #333;
 }
 .feature-title h3{
     color: #fff;
@@ -92,7 +125,6 @@ img{
     margin: auto;
     display: inline-block;
     text-transform: uppercase;
-   
     letter-spacing: 5px;
 }
 .feature-title h1{
@@ -104,7 +136,6 @@ img{
     overflow: hidden;
     text-shadow: 0px 10px 30px rgb(0 0 0 / 43%);
 }
-
 .feature-title p{
     color: #fff;
     font-size: 16px;
@@ -112,14 +143,6 @@ img{
     text-shadow: 0px 10px 30px rgb(0 0 0 / 43%);
     margin-bottom: 30px;
     letter-spacing: 1px;
-}
-
-.mySlides {
-    display:none;
-}
-.button{
-    position: relative;
-    top: 10%;
 }
 .feature-title a{
     padding: 12px 28px;
@@ -135,6 +158,29 @@ img{
 .feature-title .outline{
     background: transparent;
     border: 1px solid #fff;
+}
+/* *********about-content********* */
+.about-content{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1170px;
+    margin: 50px auto;
+    padding: 1em;
+}
+.about-content .inner-1{
+    width: 500px;
+}
+.about-content .inner-1 p{
+    line-height: 1.5rem;
+    font-family: 'Mulish', sans-serif;
+    font-size: 1em;
+    color: #222;
+    font-weight: 800;
+    margin-top: 2em;
+}
+.about-content .inner-2{
+    width: 470px;
 }
 /* *********services************** */
 .services,
@@ -155,8 +201,7 @@ img{
     color: #FF852E;
     text-transform: uppercase;
     padding-bottom: 1.1rem;
-    position: relative;
-   
+    position: relative; 
 }
 .services .services-title h3::after,
 .offers .offers-title h3::after{
@@ -232,28 +277,23 @@ img{
     opacity: 0;
     padding-left: 10px;
     transition: ease all 0.5s;
-
 }
 .services-card .card .card-info a:hover::after{
-   
-    opacity: 1;
-   
+    opacity: 1;  
 }
-
 .services-card .card .card-info a:hover{
     background: #86AE34;
     color: #fff;  
 }
-/* ************click************* */
 
+/* ************click************* */
 .click{
     display: flex;
     justify-content: center;
     max-width: 1600px;
     width: 100%;
     margin: 0 auto;
-    font-family: 'Mulish', sans-serif;
-   
+    font-family: 'Mulish', sans-serif;  
 }
 .click-part-1{
     width: 50%;
@@ -264,7 +304,6 @@ img{
     height: 640px;
     padding: 4em;
 }
-
 .click-part-1 h3{
     text-transform: uppercase;
     color: #fff;
@@ -273,26 +312,20 @@ img{
 }
 .click-part-1 p b{
     color: #fff;
-    font-size: 18px;
-   
-   
+    font-size: 18px; 
 }
-
 .click .click-part-1 .btn{
     padding: 12px 28px;
     background: #85AE34;
     font-size: 14px;
     position: relative;
-    right: 1.5em;
-    
+    right: 1.5em; 
     border-radius: 2px;
     color: #fff;
     letter-spacing: 1px;
     text-transform: capitalize;
     font-weight: 800;
-   
-   float: right;
-    
+    float: right; 
 }
 .click-part-2{
     width: 50%;
@@ -302,8 +335,8 @@ img{
     background-size: cover; 
     height: 640px;
 }
-/* *****  offers  ***************** */
 
+/* *****  offers  ***************** */
 .offers{
     max-width: 1575px;
     width: 100%;
@@ -315,33 +348,23 @@ img{
    gap: 1.75em;
 }
 .card-details{
-    
     overflow: hidden;
-    position: relative;
-    
+    position: relative; 
 }
 .card-details .image-wrap{
     transition: all 1s ease;
     border: 2px solid #FF852E;
 }
-
-
-
 .card-details .image-wrap:hover{
     transform: scale(1.1);
-    
-   
 }
 .card-details .content-wrap{
-
     text-align: center;
     width: 100%;
     position: absolute;
     bottom: 0;
     left: 0;
-    
     width: 100%;
-
     background: linear-gradient(rgba(255, 255, 255, 0), rgb(101, 140, 22));
     z-index: 1;
 }
@@ -370,14 +393,12 @@ img{
     letter-spacing: 1px;
     text-transform: capitalize;
     font-weight: 800;
-  
 }
 .card-button a:hover{
     background: #86AE34;
 }
 
 /* ********* footer************** */
-
 .footer{
     display: flex;
     justify-content: space-around;
@@ -387,9 +408,6 @@ img{
     text-align: left;
     font-family: 'Mulish', sans-serif;
 }
-
-
-
 .footer h3{
     text-transform: uppercase;
     font-weight: 800;
@@ -417,11 +435,9 @@ img{
 .footer p{
     padding: 10px 15px;
     margin-top: 20px;
- 
     background: #ff852e;
     font-size: 14px;
     position: relative;
-
     border-radius: 2px;
     z-index: 1;
     color: #fff;
@@ -464,9 +480,6 @@ img{
 }
 
 
-
-
-
 @media only screen and (min-width: 501px) and (max-width: 1025px){
     .navbar{
         padding: 0.5em 2em;
@@ -476,34 +489,35 @@ img{
         font-size: 0.75em;
         line-height: 3;
     }
+
     nav ul{
         width: 50%;
         position: absolute;
-        top: 4em;
+        top: 3.25em;
         left: 0;
         z-index: 2;
         flex-direction: column;
-        background: cyan;
-        
+        background: #000; 
         
     }
     nav ul li{
         padding: 4em;
-        
-
     }
     #myNav{
         overflow: scroll;
         transition: 1s;
         height: 100vh;
     }
+    .about-content .inner-1 p{
+        
+        margin-top: 0;
+    }
     .services-card{
         flex-direction: column;
     }
     .services-card .card{
         width: 95%;
-        margin: 0 auto;
-        
+        margin: 0 auto; 
     }
     .services-card .card .card-img{
     
@@ -542,6 +556,9 @@ img{
         opacity: 0;
     }
 }
+
+
+
 @media screen and (max-width: 500px){
     .navbar{
         padding: 0.5em 2em;
@@ -558,19 +575,19 @@ img{
         left: 0;
         z-index: 2;
         flex-direction: column;
-        background: cyan;
-        
+        background: #000;
         
     }
     nav ul li{
         padding: 4em;
-        
-
     }
     #myNav{
         overflow: scroll;
         transition: 1s;
         height: 100vh;
+    }
+    .feature-title h1{
+        font-size: 2rem;
     }
     .services-card{
         flex-direction: column;
@@ -578,14 +595,11 @@ img{
     .services-card .card{
         width: 95%;
         margin: 0 auto;
-        
     }
     .services-card .card .card-img{
-    
         max-width: 13%;
     }
     .services-card .card .card-info p{
-      
         min-height: 90px;
         line-height: 1.5rem;
     }
@@ -628,6 +642,21 @@ img{
     }
     .bottom{
         opacity: 1;
+    }
+    .about-content{
+       
+        flex-direction: column;
+        padding: 1em;
+    }
+    .about-content .inner-1{
+        width: 100%;
+    }
+    .about-content .inner-1 p{
+        margin-top: 0;
+    }
+    .about-content .inner-2{
+        width: 100%;
+        margin-top: 1em;
     }
     
 }

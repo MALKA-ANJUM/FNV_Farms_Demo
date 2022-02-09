@@ -19,8 +19,8 @@
             </div>
             <nav>
                 <ul id="myNav">
-                    <li><a href="#" class="active">home</a></li>
-                    <li><a href="#">about us</a></li>
+                    <li><a href="farm.html" class="active">home</a></li>
+                    <li><a href="about.html">about us</a></li>
                     <li><a href="#">founders</a></li>
                     <li><a href="#">investors</a></li>
                     <li><a href="#">media</a></li>
@@ -31,18 +31,23 @@
         </div>
         <!-- navbar ends -->
         <!-- feature------------ -->
-        <div class="feature ">
+        <div class="slideshow-container">
+            <div class="mySlides">
+                  <img src="pic-1.jpg" style="width:100%">
+            </div>
+        
+            <div class="mySlides">
+                <img src="pic-2.jpg" style="width:100%">
+            </div>
+        
+            <div class="mySlides">
+                <img src="pic-3.jpg" style="width:100%">
+            </div>
+        
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
             <div class="bg-overlay"></div>
-            <img class="mySlides" src="pic-1.jpg" style="width:100%">
-            <img class="mySlides" src="pic-2.jpg" style="width:100%">
-            <img class="mySlides" src="pic-3.jpg" style="width:100%">
-            
-               
-               
             <div class="feature-title">
-                <button class="button" style="float: left;" onclick="plusDivs(-1)">&#10094;</button>
-                <button class="button" style="float: right;" onclick="plusDivs(1)">&#10095;</button>
-               
                 <h3>FRESHLY PROCURED. FRESHLY DELIVERED</h3>
                 <h1>EAT FRESH DAILY</h1>
                 <p>Order farm fresh fruits and vegetables and get it delivery directly at your doorstep</p>
@@ -50,16 +55,8 @@
                 <a href="#" class="outline">full menu</a>
                 <a href="#">order online</a>
             </div>
-
         </div>
-
-
-
-
-
-
-
-
+     
 
         <!-- --------services -->
         <div class="services">
@@ -237,41 +234,50 @@
 
 
 
-    <script>
-        var menuList = document.getElementById("myNav")
+<script>
+    var menuList = document.getElementById("myNav")
   
-      myNav.style.maxHeight = "0px";
+    myNav.style.maxHeight = "0px";
   
-      function togglemenu(){
-          if(myNav.style.maxHeight == "0px")
-      {
-          myNav.style.maxHeight = "1000px";
-      }
-          else
-      {
-          myNav.style.maxHeight = "0px";   
-      }
-  }
+    function togglemenu(){
+        if(myNav.style.maxHeight == "0px")
+        {
+        myNav.style.maxHeight = "1000px";
+        }
+        else
+        {
+        myNav.style.maxHeight = "0px";   
+        }
+    }
 
 
 
-  var slideIndex = 1;
-showDivs(slideIndex);
+    var slideIndex = 1;
+    showSlides(slideIndex);
 
-function plusDivs(n) {
-  showDivs(slideIndex += n);
-}
+    function plusSlides(n) {
+    showSlides(slideIndex += n);
+    }
 
-function showDivs(n) {
-  var i;
-  var x = document.getElementsByClassName("mySlides");
-  if (n > x.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = x.length}
-  for (i = 0; i < x.length; i++) {
-     x[i].style.display = "none";  
-  }
-  x[slideIndex-1].style.display = "block";  
-}
-   </script>
+    function currentSlide(n) {
+    showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    if (n > slides.length) {slideIndex = 1}    
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " active";
+    }
+</script>
 </body>
 </html>
